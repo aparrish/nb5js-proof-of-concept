@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+    <style type="text/css">
+        .cell {
+            border: 1px black solid;
+            padding-left: 4em;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            padding-right: 0.5em;
+            margin: 0.5em;
+        }
+        .cell-focused {
+            border: 3px blue solid;
+        }
+        #ctrls {
+            position: fixed;
+            top: 0; left: 0;
+            background-color: white;
+            padding: 0.5em;
+            border-bottom: 1px black solid;
+            width: 100%;
+            font-size: 1.25em;
+        }
+        #ctrls button {
+            font-size: 1em;
+        }
+        #nbcontainer {
+            margin-top: 4em;
+        }
+        iframe {
+            border: 0;
+        }
+    </style>
+  </head>
+  <body>
+      <div id='ctrls'>
+          📓 <span style='font-family: fantasy; font-style: italic;
+              padding-right: 0.5em;'
+              title="nb5.js proof of concept by Allison Parrish">nb5.js</span>
+          <button id="addButton">+</button>
+          <button id="playButton">▶️</button>
+          <button id="cutButton">✄</button>
+          <select id="celltype">
+              <option value="md">markdown</option>
+              <option value="js">javascript</option>
+              <option value="p5">p5 sketch</option>
+          </select>
+      </div>
+
+    <div id="nbcontainer">
+    </div>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
